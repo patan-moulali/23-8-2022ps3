@@ -6,39 +6,61 @@ using System.Threading.Tasks;
 
 namespace _23_8_2022ps8
 {
-    internal class ps8
+    public class program2
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            Console.WriteLine("input first number");
-            int i = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("input second number");
-            int j = Convert.ToInt32(Console.ReadLine());
-            Divide(i, j);
-
+            int a, b;
+            int sum;
+            Console.Write("Enter the  first number");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the second number");
+            b = Convert.ToInt32(Console.ReadLine());
+            sum = addition(a, b);
+            Console.WriteLine("sum is : " + sum);
             Console.ReadLine();
         }
-        static void Divide(int p, int q)
+        public static int addition(int a, int b)
         {
-            try
-            {
-                int r;
-                r = p / q;
-                Console.WriteLine(r);
-            }
-            catch (DivideByZeroException ex)
-            {
-                Console.WriteLine(ex.StackTrace);
-
-            }
-            finally
-            {
-                Console.WriteLine("anyway message got");
-            }
-
+            return (a + b);
         }
+
     }
 }
+//{
+//    internal class ps8
+//    {
+//        static void Main(string[] args)
+//        {
+//            Console.WriteLine("input first number");
+//            int i = Convert.ToInt32(Console.ReadLine());
+//            Console.WriteLine("input second number");
+//            int j = Convert.ToInt32(Console.ReadLine());
+//            Divide(i, j);
+
+//            Console.ReadLine();
+//        }
+//        static void Divide(int p, int q)
+//        {
+//            try
+//            {
+//                int r;
+//                r = p / q;
+//                Console.WriteLine(r);
+//            }
+//            catch (DivideByZeroException ex)
+//            {
+//                Console.WriteLine(ex.StackTrace);
+
+//            }
+//            finally
+//            {
+//                Console.WriteLine("anyway message got");
+//            }
+
+//        }
+//    }
+//}
 
 //{ 
 //    public struct Employee
