@@ -6,58 +6,152 @@ using System.Threading.Tasks;
 
 namespace _23_8_2022ps4
 {
-    struct Employee
+    public struct Employee
     {
-        public int id;
-        public string name;
-        public int salary;
-        public int deptno;
+        public int No;
 
-        public void getId(int id)
+        public string Name;
+
+        public int Sal;
+
+        public int Deptno;
+
+        public void SetEmployee(int no, string name, int sal, int deptno)
+
         {
-            Console.WriteLine("Employee Id: " + id);
-        }
-        public void getname(string name)
-        {
-            Console.WriteLine("Employee name: " + name);
-        }
-        public void getsalary(int salary)
-        {
-            Console.WriteLine("Employee salary: " + salary);
-        }
-        public void getdeptno(int deptno)
-        {
-            Console.WriteLine(" Employee deptno: " + deptno);
+
+            No = no;
+
+            Name = name;
+
+            Sal = sal;
+
+            Deptno = deptno;
+
         }
 
+
+
+
+        public void DisplayEmployee()
+
+        {
+
+            Console.WriteLine("Employee:");
+
+            Console.WriteLine("\tNo    : " + No);
+
+            Console.WriteLine("\tName   : " + Name);
+
+            Console.WriteLine("\tSal   : " + Sal);
+
+            Console.WriteLine("\tDeptno   : " + Deptno);
+
+            Console.WriteLine("\n");
+
+        }
     }
+
 
     class Program
     {
+
+
+
         static void Main(string[] args)
         {
 
 
-            Employee emp;
 
 
-            emp.id = 1;
-            string name = null;
-            emp.name = name;
-            emp.salary = 1000;
-            emp.deptno = 21;
+
+            Employee[] emp = { new Employee(),
+
+                       new Employee(),
+
+                       new Employee(),
+
+                       new Employee(),
+        };
 
 
-            emp.getId(emp.id);
-            emp.getname(emp.name);
-            emp.getsalary(emp.salary);
-            emp.getdeptno(emp.deptno);
 
 
-            Console.ReadLine();
+
+            emp[0].SetEmployee(1, "Apsar", 1999, 28);
+
+            emp[1].SetEmployee(2, "Moulali", 2000, 29);
+
+            emp[2].SetEmployee(3, "Nagendra", 2100, 30);
+
+            emp[3].SetEmployee(4, "Mahesh", 2200, 31);
+
+
+
+            emp[0].DisplayEmployee();
+
+            emp[1].DisplayEmployee();
+
+            emp[2].DisplayEmployee();
+
+            emp[3].DisplayEmployee();
+            Console.ReadKey();
         }
     }
 }
+//{
+    //struct Employee
+    //{
+    //    public int id;
+    //    public string name;
+    //    public int salary;
+    //    public int deptno;
+
+    //    public void getId(int id)
+    //    {
+    //        Console.WriteLine("Employee Id: " + id);
+    //    }
+    //    public void getname(string name)
+    //    {
+    //        Console.WriteLine("Employee name: " + name);
+    //    }
+    //    public void getsalary(int salary)
+    //    {
+    //        Console.WriteLine("Employee salary: " + salary);
+    //    }
+    //    public void getdeptno(int deptno)
+    //    {
+    //        Console.WriteLine(" Employee deptno: " + deptno);
+    //    }
+
+    //}
+
+    //class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+
+
+    //        Employee emp;
+
+
+    //        emp.id = 1;
+    //        string name = null;
+    //        emp.name = name;
+    //        emp.salary = 1000;
+    //        emp.deptno = 21;
+
+
+    //        emp.getId(emp.id);
+    //        emp.getname(emp.name);
+    //        emp.getsalary(emp.salary);
+    //        emp.getdeptno(emp.deptno);
+
+
+    //        Console.ReadLine();
+//        }
+//    }
+//}
 //{ 
 //   struct employee
 //{
